@@ -68,7 +68,6 @@ class GuestController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
      * @throws RecordNotDeletedException
      */
     public function destroy(Guest $guest)

@@ -18,10 +18,10 @@ class GuestFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->firstName(),
-            'surname' => $this->faker->lastName(),
-            'email' => $this->faker->email(),
-            'phone' => $this->faker->phoneNumber(),
+            'name' => fake()->firstName(),
+            'surname' => fake()->lastName(),
+            'email' => fake()->email(),
+            'phone' => fake()->phoneNumber(),
             'country_id' => Country::query()
                 ->inRandomOrder()
                 ->first()
