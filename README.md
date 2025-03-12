@@ -20,7 +20,7 @@
 * Переходим в директорию с проектом
 * Копируем `.env.example` в `.env`
 * Создаем ключ для приложения `php artisan key:generate`
-* Запускаем Docker-команду `docker compose up -d --build`
+* Запускаем Docker `docker compose up -d --build`
 
 ## Документация маршрутов
 
