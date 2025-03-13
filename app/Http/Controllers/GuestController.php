@@ -41,7 +41,7 @@ class GuestController extends Controller
      * @throws RecordNotFoundException
      * @throws RecordNotCreatedException
      */
-    public function store(StoreRequest $request)
+    public function store(StoreRequest $request): GuestResource
     {
         $data = $request->validated();
 
@@ -51,7 +51,7 @@ class GuestController extends Controller
     }
 
 
-    public function show(Guest $guest)
+    public function show(Guest $guest): GuestResource
     {
         return GuestResource::make($guest);
     }
@@ -72,7 +72,7 @@ class GuestController extends Controller
     /**
      * @throws RecordNotDeletedException
      */
-    public function destroy(Guest $guest)
+    public function destroy(Guest $guest): JsonResponse
     {
         $this->service->destroy($guest);
 
