@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Requests\Guest;
 
 use App\Http\Requests\Base\BaseRequest;
-use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Validation\Rule;
 
 class UpdateRequest extends BaseRequest

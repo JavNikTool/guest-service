@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Services;
 
 use App\Contracts\ResourceService;
@@ -40,13 +42,12 @@ class GuestService implements ResourceService
      */
     public function store(array $data): Model
     {
-        if(empty($data['country_id'])) {
+        if (empty($data['country_id'])) {
             $countryService = app(CountryService::class);
 
             $countryCode = $countryService->getCountryByPhone($data['phone']);
 
-            if($countryCode)
-            {
+            if ($countryCode) {
                 $data['country_id'] = $countryService->findOrCreate($countryCode)->id;
             }
         }

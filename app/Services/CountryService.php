@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Services;
 
 use App\Exceptions\Record\RecordNotCreatedException;
@@ -36,11 +38,11 @@ class CountryService
      * @throws RecordNotFoundException
      * @throws RecordNotCreatedException
      */
-    public function FindOrCreate(string $title): Country
+    public function findOrCreate(string $title): Country
     {
         $country = $this->find($title);
 
-        if(!$country) {
+        if (!$country) {
             $country = $this->create($title);
         }
 

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Repositories;
 
 use App\Contracts\ResourceRepository;
@@ -58,7 +60,7 @@ class GuestRepository implements ResourceRepository
     public function update(Model $model, array $data): void
     {
         try {
-             $model->update($data);
+            $model->update($data);
         } catch (\Exception $e) {
             throw new RecordNotUpdatedException($e->getMessage());
         }
