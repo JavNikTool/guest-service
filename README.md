@@ -19,7 +19,8 @@
 * Клонируем репозиторий командой `git clone https://github.com/JavNikTool/guest-service`
 * Переходим в директорию с проектом
 * Копируем `.env.example` в `.env`
-* Запускаем Docker-команду `docker compose up -d --build`
+* Создаем ключ для приложения `php artisan key:generate`
+* Запускаем Docker `docker compose up -d --build`
 
 ## Документация маршрутов
 
